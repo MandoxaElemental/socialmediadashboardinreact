@@ -1,11 +1,23 @@
-body{
+.dark{
   width: 100%;
   height: 100vh;
   background: linear-gradient(
     to top,
     #1E202A 0%,
-    #1E202A 75%,
-    #1F212E 75%,
+    #1E202A 65%,
+    #1F212E 65%,
     #1F212E 100%
+  );
+} 
+
+.regular{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    to top,
+    white 0%,
+    white 65%,
+    #F5F7FF 65%,
+    #F5F7FF 100%
   );
 } 
