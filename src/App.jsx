@@ -1,26 +1,45 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import { Dashboard } from './components/Dashboard'
 import { Overview } from './components/Overview'
 
 function App() {
 
+
+const [theme, setTheme] = useState('dark');
+
+const changeTheme = () => {
+  setTheme(theme == 'light' ? 'dark' : 'light');
+};
+
+useEffect(() => {
+  if (theme == 'dark'){
+    document.querySelector('html')?.classList.add('dark')
+  } else {
+    document.querySelector('html')?.classList.remove('dark')
+  }
+}, [theme]);
+
   return (
     <>
-    <div className='flex justify-between px-10 pt-10'>
+    <div className='absolute h-[40%] w-[100%] bg-[#F5F7FF] dark:bg-[#1F212E]'>
+    </div>
+    <div className='bg-white dark:bg-[#1E202A]'>
+      <div className='relative'>
+    <div className='grid grid-cols-1 sm:grid-cols-2 px-10 pt-10'>
         <div className=''>
-        <p className='dark:text-white text-4xl font-semibold'>
+        <p className='text-[#1E202A] dark:text-white text-4xl font-semibold'>
     Social Media Dashboard
         </p>
         <p className='text-[#63687E] dark:text-[#8B97C6] font-semibold'>
     Total Followers
         </p>
     </div>
-    <div>
-        <label class="inline-flex items-center cursor-pointer">
-        <span class="mr-3 text-sm font-medium text-white dark:text-gray-300">Dark Mode</span>
-      <input type="checkbox" value="" class="sr-only peer"/>
-      <div class="relative w-14 h-7 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[4px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600"></div>
+    <div className='flex justify-end'>
+        <label className="inline-flex items-center cursor-pointer">
+        <span className="mr-3 text-sm font-semibold text-[#63687E] dark:text-[#8B97C6] ">Dark Mode</span>
+      <input type="checkbox" value="" className="sr-only peer" />
+      <div onClick={changeTheme}  className="relative w-14 h-7 bg-[#8B97C6] dark:bg-gradient-to-r from-[#378FE6] to-[#3EDA82] peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[rgb(240,242,250)] dark:peer-focus:ring-[#1E202A] rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-[#F5F7FF] dark:after:border-[#1E202A] after:content-[''] after:absolute after:top-0.5 after:start-[4px] after:bg-white dark:after:bg-[#1F212E] after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-[#] dark:peer-checked:bg-blue-600"></div>
     </label>
     </div>
     </div>
@@ -29,6 +48,8 @@ function App() {
             <p className='text-[#63687E] dark:text-[#8B97C6] font-semibold text-3xl'>Overview - Today</p>
       </div>
       <Overview/>
+      </div>
+    </div>
     </>
   )
 }
