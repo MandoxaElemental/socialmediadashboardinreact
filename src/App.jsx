@@ -28,7 +28,7 @@ useEffect(() => {
       <div className='relative'>
     <div className='grid grid-cols-1 sm:grid-cols-2 px-10 pt-10'>
         <div className=''>
-        <p className='text-[#1E202A] dark:text-white text-4xl font-semibold'>
+        <p className='text-[#1E202A] dark:text-white text-4xl font-bold'>
     Social Media Dashboard
         </p>
         <p className='text-[#63687E] dark:text-[#8B97C6] font-semibold'>
