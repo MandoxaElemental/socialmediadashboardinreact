@@ -1,10 +1,21 @@
-import { useEffect, useState } from 'react'
+import { React, useEffect, useState } from 'react'
+import { DatabaseInfo } from './services/DashboardData'
 import './App.css'
 import { Dashboard } from './components/Dashboard'
 import { Overview } from './components/Overview'
 
 function App() {
 
+  const [Followers, setFollowers] = useState('');
+  
+
+  useEffect(() => {
+      const fetchData = async () => {
+          const data = await DatabaseInfo();
+          setFollowers(data[0].followers.toLocaleString())
+      }
+      fetchData();
+  }, [])
 
 const [theme, setTheme] = useState('dark');
 
@@ -22,9 +33,10 @@ useEffect(() => {
 
   return (
     <>
-    <div className='absolute h-[50%] sm:h-[45%] w-[100%] bg-[#F5F7FF] dark:bg-[#1F212E]'>
+    <div className='bg-white dark:bg-[#1E202A] fixed flex h-full w-full'>
     </div>
-    <div className='bg-white dark:bg-[#1E202A]'>
+    <div className='absolute h-[50%] sm:h-[40%] w-[100%] bg-[#F5F7FF] dark:bg-[#1F212E]'>
+    </div>
       <div className='relative'>
     <div className='grid grid-cols-1 sm:grid-cols-2 px-10 pt-10'>
         <div className=''>
@@ -32,9 +44,9 @@ useEffect(() => {
     Social Media Dashboard
         </p>
         <p className='text-[#63687E] dark:text-[#8B97C6] font-semibold'>
-    Total Followers
+    Total Followers: {Followers}
         </p>
-        <hr class="sm:hidden my-6 h-[1px] border-t-0 bg-[#63687E] dark:bg-[#8B97C6]" />
+        <hr className="sm:hidden my-6 h-[1px] border-t-0 bg-[#63687E] dark:bg-[#8B97C6]" />
     </div>
     <div className='flex justify-between sm:justify-end items-center'>
         <span className="mr-3 text-sm font-semibold text-[#63687E] dark:text-[#8B97C6] ">Dark Mode</span>
@@ -50,7 +62,6 @@ useEffect(() => {
       </div>
       <Overview/>
       </div>
-    </div>
     </>
   )
 }
