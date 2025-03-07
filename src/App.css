@@ -1,6 +1,27 @@
 @font-face {
     font-family: Inter;
     src: url(/public/assets/fonts/Inter.ttc);
+    font-weight: normal;
+}
+@font-face {
+    font-family: Inter;
+    src: url(/public/assets/fonts/InterDisplay-Light.ttf);
+    font-weight: 300;
+}
+@font-face {
+    font-family: Inter;
+    src: url(/public/assets/fonts/InterDisplay-SemiBold.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: Inter;
+    src: url(/public/assets/fonts/Inter-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: Inter;
+    src: url(/public/assets/fonts/Inter-ExtraBold.ttf);
+    font-weight: 800;
 }
 
 body{
