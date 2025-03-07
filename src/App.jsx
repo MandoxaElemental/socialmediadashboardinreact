@@ -40,7 +40,7 @@ useEffect(() => {
         <span className="mr-3 text-sm font-bold text-[#63687E] dark:text-[#8B97C6] ">Dark Mode</span>
         <label className="inline-flex items-center cursor-pointer">
       <input type="checkbox" value="" className="sr-only peer" />
-      <div onClick={changeTheme}  className="relative w-14 h-7 bg-[#8B97C6]dark:bg-gradient-to-r from-[#378FE6] to-[#3EDA82] hover: peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[rgb(240,242,250)] dark:peer-focus:ring-[#1E202A] rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-[#F5F7FF] dark:after:border-[#1E202A] after:content-[''] after:absolute after:top-0.5 after:start-[4px] after:bg-white dark:after:bg-[#1F212E] after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-[#] dark:peer-checked:bg-blue-600"></div>
+      <div onClick={changeTheme}  className="relative w-14 h-7 bg-[#8B97C6]dark:bg-gradient-to-r from-[#378FE6] to-[#3EDA82] peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[rgb(240,242,250)] dark:peer-focus:ring-[#1E202A] rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-[#F5F7FF] dark:after:border-[#1E202A] after:content-[''] after:absolute after:top-0.5 after:start-[4px] after:bg-white dark:after:bg-[#1F212E] after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-[#] dark:peer-checked:bg-blue-600"></div>
     </label>
     </div>
     </div>
