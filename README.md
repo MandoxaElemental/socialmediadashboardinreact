@@ -32,5 +32,5 @@
 ### Social Media Dashboard in React - Build_Vercel Link:
 [Social Media Dashboard in React - Vercel Link](https://socialmediadashboardinreact.vercel.app/)
 
-This has been Peer Reviewed By: 
-> Comments: 
+This has been Peer Reviewed By: Brock Spacek
+> Comments: Everything works as intended. The projects Dark and Light mode are spot on as well mobile and desktop version match perfectly. It looks like you also created your own backend and it looks great. My only slight thing is that the background on my screen doesnt change all the way on dark mode for desktop and still shows a little bit of white. Everything else looks spot on!
